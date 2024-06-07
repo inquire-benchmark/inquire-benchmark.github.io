@@ -139,15 +139,15 @@ export default function Home() {
                         &nbsp; <span className="text-slate-600 ">*, †  <i>indicates equal contribution</i></span>
                     </div>
                     <div className="mt-8">
-                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="#">
+                        {/* <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="#">
                             <Icons.FilePdfFill className="w-4 h-4 inline mr-2"/>
                             Paper
-                        </a>
-                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="#">
+                        </a> */}
+                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="https://github.com/inquire-benchmark/INQUIRE">
                             <Icons.Github className="w-4 h-4 inline mr-2"/>
                             Code
                         </a>
-                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="#">
+                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="https://github.com/inquire-benchmark/INQUIRE/tree/main/data">
                             <Icons.Image className="w-4 h-4 inline mr-2"/>
                             Data
                         </a>
@@ -217,15 +217,6 @@ export default function Home() {
                       ))}
                       </div>
 
-                  </div>
-              </div>
-              <div className="text-center text-slate-700 mt-5">
-                  <div className="mb-2 text-sm">Want to try your own queries?</div>
-                  <div className="">
-                    <a className="inline-block text-blue-600 bg-blue-500 px-5 py-1.5 rounded-lg text-white text-md" href="http://ec2-3-147-61-23.us-east-2.compute.amazonaws.com/query" target="_blank">
-                        Open the live demo
-                        <Icons.ArrowRight className="inline ml-2 w-5 h-5 mb-0.5"/>
-                    </a>
                   </div>
               </div>
           </div>
