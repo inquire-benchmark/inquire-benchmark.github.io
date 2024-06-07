@@ -121,7 +121,7 @@ export default function Home() {
                         A Benchmark for Natural World Image Retrieval
                     </div>
                     <div className="mb-2">
-                        <a className="text-sky-500" href="https://edwardv.com" target="_blank">Eddie Vendrow</a>*<sup>1</sup>, 
+                        <a className="text-sky-500" href="https://edwardv.com" target="_blank">Edward Vendrow</a>*<sup>1</sup>, 
                         <a className="text-sky-500" href="https://omipan.github.io/" target="_blank"> Omiros Pantazis</a>*<sup>2</sup>,
                         <a className="text-sky-500" href="https://www.inaturalist.org/users/44845" target="_blank"> Alexander Shepard</a>*<sup>3</sup>, 
                         <a className="text-sky-500" href="http://www0.cs.ucl.ac.uk/staff/g.brostow/" target="_blank"> Gabriel Brostow</a>*<sup>2</sup>, 
