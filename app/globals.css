@@ -32,3 +32,29 @@ body {
     text-wrap: balance;
   }
 }
+
+
+table.leaderboard {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+table.leaderboard th {
+  /* background-color: --background-slate-100; */
+}
+
+table.leaderboard td, th {
+  border-bottom: 1px solid #ddd;
+  padding: 6px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+table.leaderboard td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.leaderboard-proprietary {
+  background-color: #fee;
+}
