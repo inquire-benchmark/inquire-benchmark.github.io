@@ -261,15 +261,23 @@ export default function Home() {
                 <tbody>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; GPT-4o</td> <td>-</td>
-                    <td>68.3</td> <td>62.5</td> <td>67.1</td> <td>75.6</td> <td>73.4</td>
+                    <td>47.1</td> <td>36.6</td> <td>49.7</td> <td>51.9</td> <td>59.4</td>
                 </tr>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; VILA1.5-40B</td>  <td>-</td>
-                    <td>61.7</td> <td>54.6</td> <td>61.7</td> <td>69.2</td> <td>67.1</td>
+                    <td>42.1</td> <td>32.5</td> <td>44.7</td> <td>46.7</td> <td>52.4</td>
                 </tr>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; GPT-4-Turbo (20240409)</td>  <td>-</td>
-                    <td>57.9</td> <td>51.0</td> <td>56.0</td> <td>64.5</td> <td>71.0</td>
+                    <td>38.8</td> <td>29.7</td> <td>40.0</td> <td>42.2</td> <td>54.7</td>
+                </tr>
+                <tr>
+                  <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; PaliGemma-3B-mix-448</td>  <td>-</td>
+                    <td>37.7</td> <td>27.2</td> <td>41.2</td> <td>41.7</td> <td>48.6</td>
+                </tr>
+                <tr>
+                  <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; LLaVA-v1.6-34B</td>  <td>-</td>
+                    <td>37.4</td> <td>28.0</td> <td>39.0</td> <td>41.8</td> <td>50.8</td>
                 </tr>
                 <tr className="bg-sky-100">
                   <td>CLIP ViT-H/14-378 (DFN)</td> <td>987M</td>
