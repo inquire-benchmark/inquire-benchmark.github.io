@@ -252,24 +252,24 @@ export default function Home() {
                     <th>Method</th>
                     <th>Size</th>
                     <th>Overall</th>
-                    <th>Species</th>
-                    <th>Context</th>
-                    <th>Behavior</th>
                     <th>Appearance</th>
+                    <th>Behavior</th>
+                    <th>Context</th>
+                    <th>Species</th>
                   </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; GPT-4o</td> <td>-</td>
-                    <td>47.1</td> <td>36.6</td> <td>49.7</td> <td>51.9</td> <td>59.4</td>
+                    <td><b>47.1</b></td> <td><b>36.6</b></td> <td><b>49.7</b></td> <td><b>51.9</b></td> <td><b>59.4</b></td>
                 </tr>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; VILA1.5-40B</td>  <td>-</td>
-                    <td>42.1</td> <td>32.5</td> <td>44.7</td> <td>46.7</td> <td>52.4</td>
+                    <td><u>42.1</u></td> <td><u>32.5</u></td> <td><u>44.7</u></td> <td><u>46.7</u></td> <td>52.4</td>
                 </tr>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; GPT-4-Turbo (20240409)</td>  <td>-</td>
-                    <td>38.8</td> <td>29.7</td> <td>40.0</td> <td>42.2</td> <td>54.7</td>
+                    <td>38.8</td> <td>29.7</td> <td>40.0</td> <td>42.2</td> <td><u>54.7</u></td>
                 </tr>
                 <tr>
                   <td>CLIP ViT-H/14-378 (DFN) Top 100 &rarr; PaliGemma-3B-mix-448</td>  <td>-</td>
@@ -353,24 +353,24 @@ export default function Home() {
                     <th>Method</th>
                     <th>Size</th>
                     <th>Overall</th>
-                    <th>Species</th>
-                    <th>Context</th>
-                    <th>Behavior</th>
                     <th>Appearance</th>
+                    <th>Behavior</th>
+                    <th>Context</th>
+                    <th>Species</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="leaderboard-proprietary">
                     <td>GPT-4o</td> <td>-</td>
-                        <td>62.4</td> <td>59.7</td> <td>61.9</td> <td>70.6</td> <td>42.4</td>
+                        <td><b>62.4</b></td> <td><b>59.7</b></td> <td><b>61.9</b></td> <td><b>70.6</b></td> <td><b>42.4</b></td>
                   </tr>
                   <tr>
                     <td>VILA1.5-40b</td> <td>40B</td>
-                        <td>54.3</td> <td>50.4</td> <td>55.1</td> <td>61.9</td> <td>36.0</td>
+                        <td><u>54.3</u></td> <td>50.4</td> <td><u>55.1</u></td> <td><u>61.9</u></td> <td>36.0</td>
                   </tr>
                   <tr className="bg-sky-100">
                     <td>SigLIP SO400m-14-384</td> <td>878M</td>
-                      <td>51.5</td> <td>51.8</td> <td>51.7</td> <td>53.4</td> <td>38.8</td>
+                      <td>51.5</td> <td><u>51.8</u></td> <td>51.7</td> <td>53.4</td> <td>38.8</td>
                   </tr>
                   <tr className="leaderboard-proprietary">
                     <td>GPT-4-Turbo (20240409)</td> <td>-</td>
@@ -450,7 +450,7 @@ export default function Home() {
                   </tr>
                   <tr className="bg-sky-100">
                     <td>BioCLIP</td> <td>150M</td>
-                      <td>28.9</td> <td>27.4</td> <td>27.2</td> <td>30.8</td> <td>41.1</td>
+                      <td>28.9</td> <td>27.4</td> <td>27.2</td> <td>30.8</td> <td><u>41.1</u></td>
                   </tr>
 
                   <tr className="bg-slate-300">
