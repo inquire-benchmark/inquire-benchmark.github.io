@@ -136,26 +136,39 @@ export default function Home() {
                         <sup className="ml-1"> 3</sup>iNaturalist
                         <sup className="ml-1"> 4</sup>University of Edinburgh
                         <sup className="ml-1"> 5</sup>University of Massachusetts, Amherst
-                        &nbsp; <span className="text-slate-600 ">*, †  <i>indicates equal contribution</i></span>
+                        &nbsp; <span className="text-slate-600 ">*, †  <i>indicates equal contribution & equal advising</i></span>
                     </div>
                     <div className="mt-8">
                         {/* <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="#">
                             <Icons.FilePdfFill className="w-4 h-4 inline mr-2"/>
                             Paper
                         </a> */}
-                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="https://github.com/inquire-benchmark/INQUIRE">
+                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" target="_blank" href="https://arxiv.org/abs/2411.02537">
+                            <Icons.FileEarmarkText className="w-4 h-4 inline mr-2"/>
+                            Paper
+                        </a>
+                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" target="_blank" href="https://github.com/inquire-benchmark/INQUIRE">
                             <Icons.Github className="w-4 h-4 inline mr-2"/>
                             Code
                         </a>
-                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" href="https://github.com/inquire-benchmark/INQUIRE/tree/main/data">
+                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" target="_blank" href="https://github.com/inquire-benchmark/INQUIRE/tree/main/data">
                             <Icons.Image className="w-4 h-4 inline mr-2"/>
                             Data
                         </a>
+                        <a className="bg-slate-600 rounded-full px-4 py-1 text-white inline-flex items-center h-8 text-sm mr-2" target="_blank" href="https://huggingface.co/datasets/evendrow/INQUIRE-Rerank">
+                            {/* 🤗 */}
+                            <div className="w-0 h-4 inline"/>
+                            🤗 HuggingFace
+                        </a>
+                        
                     </div>
                 </div>
             </div>
         </div>
-        <div className="w-full min-h-screen bg-white pt-16">
+
+
+
+        <div className="w-full min-h-screen bg-white pt-16 pb-8">
 
           <div className="max-w-[900px] px-6 m-auto">
               <div className="text-[48px] font-medium text-center mb-2 items-center">
@@ -175,7 +188,7 @@ export default function Home() {
                   <b>Expert-level multi-modal models require expert-level benchmarks.</b>
                   <br /><br />
                   
-                  We introduce <b>🔍 INQUIRE</b>, an image retrieval benchmark of <b>200 challenging ecological queries</b> that are comprehensively
+                  We introduce <b>🔍 INQUIRE</b>, a text-to-image retrieval benchmark of <b>250 challenging ecological queries</b> that are comprehensively
                   labeled over a new <b>5 million image</b> subset of iNaturalist (iNat24). We hope that <b>🔍 INQUIRE</b> will encourage the 
                   community to build next-generation image retrieval methods toward the goal of helping accelerate and automate scientific discovery.
               </div>
@@ -211,7 +224,7 @@ export default function Home() {
                           //     priority={true}
                           //     key={idx}
                           // />    
-                          <div className="w-40 h-40 m-2"
+                          <div className="w-32 h-32 lg:w-40 lg:h-40 m-1"
                                 style={{ background: `url('/images/queries/${im}') center / cover`, backgroundRepeat: 'no-repeat' }}
                                 key={idx}></div>
                       ))}
@@ -219,10 +232,77 @@ export default function Home() {
 
                   </div>
               </div>
+              <div className="mt-4 text-center text-slate-700">
+                Want to search own queries? Try the <a className="text-sky-500 underline" href="https://inquire-demo.csail.mit.edu" target="_blank">live demo &rarr;</a>.
+              </div>
           </div>
         </div>
-        <div className="py-1 bg-slate-100 text-[60px] font-medium flex items-center justify-center text-center">
-          IN<img src="images/inat-logo-2-black-notail.png" className="h-12 inline scale-x-[-1]" />UIRE Leaderboards
+
+
+        <div className="py-1 bg-slate-100 text-[40px] font-medium flex items-center justify-center text-center">
+          Queries
+        </div>
+        <div className="w-full bg-white py-8">
+
+          <div className="max-w-[900px] px-6 m-auto">
+                
+            <div>
+              The 250 queries contained within INQUIRE come from discussions and interviews with a range of experts including ecologists, biologists, ornithologists, entomologists, oceanographers, and forestry experts.
+            </div>
+
+            <div className="mt-4">
+              We exhaustively labeled these queries, finding over 33k relevant images (from 1 to 1k+ image matches per query) in iNat24.
+            </div>
+            <div className="mt-4">
+              Our queries cover a range of topics and a organism taxonomies:
+            </div>
+
+
+                    
+            <div className="flex flex-wrap justify-center mt-4">
+
+              <img src="images/inquire_taxa.png" className="h-56 mx-2" />
+              <img src="images/inquire_categories.png" className="h-48 mx-2" />
+            </div>
+          </div>
+        </div>
+
+        <div className="py-1 bg-slate-100 text-[40px] font-medium flex items-center justify-center text-center">
+          Tasks
+        </div>
+        <div className="w-full bg-white py-8">
+
+          <div className="max-w-[900px] px-6 m-auto">
+                
+            <div className="mb-4">INQUIRE includes two key tasks: </div>
+            <div className="mt-2">
+              <b>INQUIRE-Fullrank: Retrieving images from the full 5M image dataset</b>
+              <br/>
+              This is the full-dataset retrieval task, starting from all 5 million images of iNat24. We evaluate one-stage retrieval, using similarity search with CLIP-style models, and two-stage retrieval, where after the initial retrieval, a large multi-modal model is used to rerank the images.
+            </div>
+            <div className="mt-2">
+              <b>INQUIRE-Rerank: Reranking task for refining a fixed set of top-100 CLIP retrievals.</b>
+              <br/>
+              INQUIRE-Rerank evaluates reranking performance by fixing an initial retrieval of 100 images for each query (from OpenClip's CLIP ViT-H-14-378). For each query (e.g. A mongoose standing upright alert), your task is to re-order the 100 images so that more of the relevant images are at the "top" of the reranked order.
+            </div>
+
+            <div className="text-blue-500 mt-4">
+            We recommend starting with INQUIRE-Rerank as it is much smaller and easier to work with. <br/>
+            INQUIRE-Rerank is <a className="underline font-bold" target="_blank" href="https://huggingface.co/datasets/evendrow/INQUIRE-Rerank">available on 🤗 HuggingFace!</a>
+            </div>
+            
+
+            {/* </div> */}
+
+            <div className="flex flex-wrap justify-center mt-8">
+
+              <img src="images/inquire_tasks.png" className="w-full mx-2" />
+            </div>
+          </div>
+        </div>
+
+        <div className="py-1 bg-slate-100 text-[40px] font-medium flex items-center justify-center text-center">
+          INQUIRE Leaderboards
         </div>
         <div className="h-10">
 
@@ -231,8 +311,8 @@ export default function Home() {
         {/* <div className="py-5 bg-slate-100 text-5xl font-medium flex items-center justify-center text-center">
           
         </div> */}
-        <div className="">
-          <div className="max-w-[960px] px-1 mx-auto">
+        <div className="mb-6">
+          <div className="max-w-[960px] px-6 mx-auto">
             <div className="mt-6">
               We evaluate current multimodal models on INQUIRE, both on the Fullrank and Rerank task.
               Evaluations are conducted in a zero-shot fashion, with no additional prompt-turning or in-context demonstrations.
@@ -462,7 +542,90 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-36">
+
+
+        <div className="py-1 bg-slate-100 text-[40px] font-medium flex items-center justify-center text-center">
+          Data
+        </div>
+        <div className="w-full bg-white py-8">
+
+          <div className="max-w-[900px] px-6 m-auto">
+
+
+          <div className="border border-slate-200 p-4 rounded-lg bg-slate-100 mb-4">
+              <div className="text-2xl font-bold text-slate-700">INQUIRE-Rerank</div>
+              <div className="mt-2">
+                This includes 200 queries and 20k images (100 images per query).
+              </div>
+              <div className="mt-0">
+                The metadata (the list of queries and the list of images) is hosted on our
+                <a className="underline font-bold ms-1" target="_blank" href="https://github.com/inquire-benchmark/INQUIRE/tree/main/data">Github repo.</a>
+              </div>
+              <div className="mt-4">
+
+                Since this task only requires the 20k images, we also provide the entire INQUIRE-Rerank dataset and images <a className="underline font-bold" target="_blank" href="https://huggingface.co/datasets/evendrow/INQUIRE-Rerank">on 🤗 HuggingFace!</a> (We recommend you start here)
+              </div>
+            </div>
+
+
+            <div className="border border-slate-200 p-4 rounded-lg bg-slate-100 mb-4">
+              <div className="text-2xl font-bold text-slate-700">INQUIRE-Fullrank</div>
+              <div className="mt-2">
+                This includes 33k relevant images from 250 queries. The images that this benchmark uses are the iNat24 dataset.
+              </div>
+              <div className="mt-0">
+                The dataset is hosted on our 
+                <a className="underline font-bold ms-1" target="_blank" href="https://github.com/inquire-benchmark/INQUIRE/tree/main/data">Github repo.</a>
+              </div>
+            </div>
+
+            <div className="border border-slate-200 p-4 rounded-lg bg-slate-100 mb-4">
+              <div className="text-2xl font-bold text-slate-700">iNat2024</div>
+              <div className="mt-2">
+                The iNaturalist 2024 dataset contains 5 million images from 10k species.
+              </div>
+              <div className="mt-0">
+                Instructions to download this full dataset are available on Github 
+                <a className="underline font-bold ms-1" target="_blank" href="https://github.com/inquire-benchmark/INQUIRE/tree/main/data">here.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="py-1 bg-slate-100 text-[40px] font-medium flex items-center justify-center text-center">
+          Citation
+        </div>
+        <div className="w-full bg-white py-8">
+
+          <div className="max-w-[900px] px-6 m-auto">
+                
+            <div>
+              If you found INQUIRE useful, please consider citing out paper:
+            </div>
+
+            {/* @article{vendrow2024inquire,
+              title={INQUIRE: A Natural World Text-to-Image Retrieval Benchmark}, 
+              author={Vendrow, Edward and Pantazis, Omiros and Shepard, Alexander and Brostow, Gabriel and Jones, Kate E and Mac Aodha, Oisin and Beery, Sara and Van Horn, Grant},
+              journal={NeurIPS},
+              year={2024},
+            } */}
+            
+            <pre className="mt-4 bg-slate-100 p-4 rounded-lg text-xs text-wrap">
+              @article{"{"}vendrow2024inquire,
+              <br />
+              &nbsp;&nbsp;title={"{"}INQUIRE: A Natural World Text-to-Image Retrieval Benchmark{"}"}, 
+              <br />
+              &nbsp;&nbsp;author={"{"}Vendrow, Edward and Pantazis, Omiros and Shepard, Alexander and Brostow, Gabriel and Jones, Kate E and Mac Aodha, Oisin and Beery, Sara and Van Horn, Grant{"}"},
+              <br />
+              &nbsp;&nbsp;journal={"{"}NeurIPS{"}"},
+              <br />
+              &nbsp;&nbsp;year={"{"}2024{"}"},
+              <br />
+              {"}"}
+            </pre>
+          </div>
 
         </div>
     </div>
