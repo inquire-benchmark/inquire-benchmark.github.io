@@ -233,7 +233,7 @@ export default function Home() {
                   </div>
               </div>
               <div className="mt-4 text-center text-slate-700">
-                Want to search own queries? Try the <a className="text-sky-500 underline" href="https://inquire-demo.csail.mit.edu" target="_blank">live demo &rarr;</a>.
+                Want to search own queries? Try the <a className="text-sky-500 underline" href="http://inquire-demo.csail.mit.edu" target="_blank">live demo &rarr;</a>.
               </div>
           </div>
         </div>
